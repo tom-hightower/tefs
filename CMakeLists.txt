@@ -19,7 +19,7 @@ find_package(ASSIMP REQUIRED)
 add_library(STB_IMAGE "src/stb_image.cpp")
 add_library(GLAD "src/glad.c")
 
-set(LIBS glfw3 opengl32 assimp STB_IMAGE GLAD)
+set(LIBS ${GLFW3_LIBRARY} ${OpenGL} assimp STB_IMAGE GLAD)
 
 include_directories(
     "${CMAKE_SOURCE_DIR}/src"

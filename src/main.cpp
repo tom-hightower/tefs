@@ -3,9 +3,19 @@
 #include "glad/glad.h"
 #include "GLFW/glfw3.h"
 #include "glm/glm.hpp"
-#include <glm/gtc/type_ptr.hpp>
-#include <glm/gtc/matrix_transform.hpp>
+using namespace glm;
 
-int main(int, char**) {
+#include "glfw_callbacks.hpp"
+
+GLFWwindow* window;
+
+int main() {
     std::cout << "Hello, world!\n";
+    glfwSetErrorCallback(GLFW_Error_Callback);
+    if (glfwInit() != GLFW_TRUE) {
+        fprintf(stderr, "Failed to init GLFW\n");
+        return -1;
+    }
+    window = glfwCreateWindow(960, 540, "tefs", NULL, NULL);
+    while (true) {}
 }
