@@ -26,9 +26,6 @@ include_directories(
     "${CMAKE_SOURCE_DIR}/include"
 )
 
-include(CTest)
-enable_testing()
-
 add_executable(tefs ${CMAKE_SOURCE_DIR}/src/main.cpp)
 
 target_link_libraries(${PROJECT_NAME} ${LIBS})
