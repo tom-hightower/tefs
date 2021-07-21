@@ -26,9 +26,9 @@ include_directories(
     "${CMAKE_SOURCE_DIR}/include"
 )
 
-add_executable(tefs ${CMAKE_SOURCE_DIR}/src/main.cpp)
+add_executable(tefs ${CMAKE_SOURCE_DIR}/src/main.cpp ${CMAKE_SOURCE_DIR}/src/glad.c)
 
-target_link_libraries(${PROJECT_NAME} ${LIBS})
+target_link_libraries(${PROJECT_NAME} ${LIBS} ${CMAKE_DL_LIBS})
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
